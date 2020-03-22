@@ -1,0 +1,16 @@
+<log4j:event logger="conslog.file" timestamp="1584899595227" level="INFO" thread="main">
+<log4j:message><![CDATA[AMCHAYD Oualid |Montant : 100.0 | Operation : verser | Nouveau Solde : 400.0 | Temps d'execution : 118ms]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="conslog.file" timestamp="1584899595333" level="INFO" thread="main">
+<log4j:message><![CDATA[AMCHAYD Oualid |Montant : 50.0 | Operation : retirer | Nouveau Solde : 350.0 | Temps d'execution : 101ms]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="conslog.file" timestamp="1584901059403" level="INFO" thread="main">
+<log4j:message><![CDATA[Omari Oualid |Montant : 100.0 | Operation : verser | Nouveau Solde : 400.0 | Temps d'execution : 116ms]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="conslog.file" timestamp="1584901059514" level="INFO" thread="main">
+<log4j:message><![CDATA[Omari Oualid |Montant : 50.0 | Operation : retirer | Nouveau Solde : 350.0 | Temps d'execution : 101ms]]></log4j:message>
+</log4j:event>
+

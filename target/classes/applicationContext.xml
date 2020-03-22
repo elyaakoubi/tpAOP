@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+    <aop:config>
+
+    <aop:pointcut expression="execution(* *..Client.retirer(double))" id="logretMeth"/>
+    <aop:pointcut expression="execution(* *..Client.verser(double))" id="logverMeth"/>
+    
+    <aop:aspect ref="logger">
+     <aop:around method="logaroundDebmethode" pointcut-ref="logretMeth" />
+     <aop:around method="logaroundAppmethode" pointcut-ref="logverMeth" />
+    </aop:aspect>
+
+
+</aop:config>
+    
+    <!-- Importing AOP configuration-->
+	<bean id="compte" class="ensa.tpaop.model.Compte">
+		<property name="solde" value="300"/>
+	</bean>
+	
+	<bean id="client" class="ensa.tpaop.model.Client">
+		<property name="nom" value="Omari Oualid"/>
+		<property name="cp" ref="compte"/>
+	</bean>
+	
+	<bean id="logger" class="ensa.tpaop.loggerAOP.Loggs"/>
+    
+
+</beans>

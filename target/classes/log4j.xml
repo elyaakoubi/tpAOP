@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd"> 
+
+<log4j:configuration debug="false" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+<appender name="console" class="org.apache.log4j.ConsoleAppender"> 
+	<layout class="org.apache.log4j.PatternLayout"> 
+	   <param name="ConversionPattern" 
+	    value="%d{yyyy-MM-dd} - %m%n"/> 
+	</layout> 
+</appender> 
+
+<appender class="org.apache.log4j.FileAppender" name="xmlfile">
+	<param name="file" value="logs.xml" />
+	<layout class="org.apache.log4j.xml.XMLLayout" />
+</appender>
+
+<logger name="conslog">   
+	<level value="INFO"/>
+	<appender-ref ref="console" /> 
+</logger>
+<logger name="conslog.file">   
+	<level value="INFO"/>
+	<appender-ref ref="xmlfile" /> 
+</logger>
+
+</log4j:configuration> 
